@@ -88,7 +88,7 @@
 -- SELECT * FROM students LIMIT 5 OFFSET 5 * 3;
 
 -- delete
-SELECT * FROM students;
+-- SELECT * FROM students;
 --  DELETE FROM students; for delete
 --  DELETE FROM students
 --    WHERE grade ='B+'
@@ -97,12 +97,44 @@ SELECT * FROM students;
 --   Where grade = 'c' AND country = 'USA'// condition Wise delete
 
 -- *Update  module8 v-8
-Select * FROM students;
+-- Select * FROM students;
 
-UPDATE students
-   set email ='default@gmail.com'
-   WHERE student_id = 61;
-
-
+-- UPDATE students
+--    set email ='default@gmail.com'
+--    WHERE student_id = 61;
 
 
+-- m-8 v-9
+-- 
+-- SELECT * FROM students 
+--    WHERE country ='USA' or country ='Canada' or country ='UK';
+
+-- SELECT * FROM students 
+-- --    WHERE country IN('USA', 'UK', 'Canada');// for multiple OR
+--  SELECT * FROM students 
+--    WHERE country NOT IN('USA', 'UK', 'Canada');// Not in for THose country
+
+-- **BETWEEN
+-- SELECT * FROM students 
+--    WHERE age BETWEEN 20 and 22; // BetWeen for in middle data include condition
+
+-- SELECT * FROM students 
+--    WHERE dob BETWEEN '2021-01-01' and '2022-01-01' ORDER BY dob;// filter by date
+
+
+-- **LIKE Keyord case sensetive
+-- SELECT * FROM students 
+--    WHERE first_name LIKE 'F%';// filter from all first_name stating With F; % for all filtering
+
+-- SELECT * FROM students 
+   -- WHERE first_name LIKE '%n';// filter from all first_name end With F; % for all filtering;
+
+   -- SELECT * FROM students 
+   -- WHERE first_name LIKE '___n';// if We need to skip first 2 letter then need to use _ _ this then filtering With n
+
+--  SELECT * FROM students 
+--    WHERE first_name LIKE '___n_';// n_ means if the character available after the n then it give those
+
+-- ** ILIKE case insensative
+-- SELECT * FROM students 
+--    WHERE first_name ILIKE 'f%'; // 
