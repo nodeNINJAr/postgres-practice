@@ -53,7 +53,34 @@ VALUES
 
 --   **also  renameing table name like that using as
 -- SELECT * FROM post as p
--- JOIN "user" as u ON p.user_id = u.id;
+-- JOIN "user" as u ON p.user_id = u.id;\
+
+
+
+-- we also write like this inner join  
+-- SELECT p.id, u.username FROM post p
+-- INNER JOIN "user" u ON p.user_id = u.id;
+
+
+SELECT * FROM "user"
+JOIN post on post.user_id = "user".id; 
+
+
+INSERT INTO post (id, title, user_id) VALUES
+(6, 'this is a test post title', NULL);
+
+
+
+-- left join if user have or not id have or null priroty for left table
+SELECT * FROM post as p
+LEFT JOIN "user" u on p.user_id = u.id;
+
+-- RIght join if user have or not id have or null priroty for right table
+SELECT * FROM post as p
+RIGHT JOIN "user" u on p.user_id = u.id;
+
+-- we also called left/right JOIN is LEFT/RIGHT OUTER JOIN
+
 
 
 
