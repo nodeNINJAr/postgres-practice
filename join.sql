@@ -80,6 +80,10 @@ SELECT * FROM post as p
 RIGHT JOIN "user" u on p.user_id = u.id;
 
 -- we also called left/right JOIN is LEFT/RIGHT OUTER JOIN
+SELECT * FROM "user" as u
+RIGHT JOIN post as p on p.user_id = u.id;
+
+-- full join
 
 
 
